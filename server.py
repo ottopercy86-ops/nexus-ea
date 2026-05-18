@@ -14,7 +14,6 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-import uvicorn
 import numpy as np
 
 # ── EA Core ──────────────────────────────────────────────────────────
@@ -595,4 +594,4 @@ if os.path.exists("static"):
     app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 if __name__ == "__main__":
-    uvicorn.run("server:app", host="0.0.0.0", port=PORT, reload=False)
+    pass
